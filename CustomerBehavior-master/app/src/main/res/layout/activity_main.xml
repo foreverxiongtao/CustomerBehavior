@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.desperado.customerbehavior.MainActivity">
+
+    <Button
+        android:id="@+id/btn_main_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textview滑动"/>
+
+    <Button
+        android:id="@+id/btn_main_scollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="scrollview滑动"/>
+
+    <Button
+        android:id="@+id/btn_main_otherview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="otherview滑动"/>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_second_source"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#FFFF0000"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_gravity="top|left"
+            android:text="depentent"/>
+
+        <TextView
+            android:id="@+id/tv_second_target"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#FF00FF00"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_gravity="top|right"
+            app:layout_behavior="com.desperado.customerbehavior.SimpleBehavior"
+            android:text="auto"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
