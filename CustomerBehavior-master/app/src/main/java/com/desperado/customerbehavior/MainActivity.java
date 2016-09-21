@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_main_otherview:
                 break;
             case R.id.btn_main_scollview:
+                startActivity(new Intent(this,ScrollViewActivity.class));
                 break;
             case R.id.btn_main_textview:
                 startActivity(new Intent(this,SecondActivity.class));

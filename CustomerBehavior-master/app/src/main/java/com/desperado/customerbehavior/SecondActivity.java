@@ -24,7 +24,8 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
             }
         });
-        mTv_second_source.setOnTouchListener(new View.OnTouchListener() {
+
+        getWindow().getDecorView().setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
@@ -41,7 +42,5 @@ public class SecondActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
-
 }

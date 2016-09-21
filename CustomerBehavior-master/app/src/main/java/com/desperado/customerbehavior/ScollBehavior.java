@@ -30,7 +30,6 @@ public class ScollBehavior extends CoordinatorLayout.Behavior<View> {
         super(context, attrs);
     }
 
-
     /***
      * 这个方法指定我们需要关心是哪个上面的滑动
      * 我们只关心垂直方向上的
@@ -39,6 +38,7 @@ public class ScollBehavior extends CoordinatorLayout.Behavior<View> {
     public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, int nestedScrollAxes) {
         return (nestedScrollAxes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
     }
+
 
     /****
      * 这个方法指定了我们该怎么滑动
@@ -52,9 +52,9 @@ public class ScollBehavior extends CoordinatorLayout.Behavior<View> {
      */
     @Override
     public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target, int dx, int dy, int[] consumed) {
-        float scrollY = target.getScaleY(); //获取关心的scrollview滑动的距离
-        child.setScaleY(scrollY);
         super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed);
+        int leftScrolled = target.getScrollY();
+        child.setScrollY(leftScrolled);
     }
 
     /****
@@ -70,7 +70,7 @@ public class ScollBehavior extends CoordinatorLayout.Behavior<View> {
      */
     @Override
     public boolean onNestedFling(CoordinatorLayout coordinatorLayout, View child, View target, float velocityX, float velocityY, boolean consumed) {
-        ((NestedScrollView) child).fling((int) velocityY);
-        return false;
+        ((NestedScrollView) child).fling((int)velocityY);
+        return true;
     }
 }
