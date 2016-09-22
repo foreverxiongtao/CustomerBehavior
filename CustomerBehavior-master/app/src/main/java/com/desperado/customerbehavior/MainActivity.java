@@ -31,12 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_main_otherview:
+                startActivity(new Intent(this, OtherActivity.class));
                 break;
             case R.id.btn_main_scollview:
-                startActivity(new Intent(this,ScrollViewActivity.class));
+                startActivity(new Intent(this, ScrollViewActivity.class));
                 break;
             case R.id.btn_main_textview:
-                startActivity(new Intent(this,SecondActivity.class));
+                startActivity(new Intent(this, SecondActivity.class));
                 break;
             default:
                 break;
